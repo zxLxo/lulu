@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=dev<ce-width, initial-scale=1.0">
+    <title>Luiza, Me Perdoa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #ffe6e6;
+        }
+        #mensagem {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .botoes {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .sim {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .nao {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Luiza, Me Perdoa</h1>
+    <p id="mensagem">Por favor, seu namorado te ama muito</p>
+    <div class="botoes">
+        <button class="sim" onclick="perdoado()">Sim</button>
+        <button class="nao" onclick="negado(this)">Não</button>
+    </div>
+
+    <script>
+        function perdoado() {
+            document.body.innerHTML = '<h1>Eu te amo muito! ❤️</h1>' +
+                                      '<img src="image0.jpg" alt="Imagem de amor" style="width: 100%; max-width: 600px;">';
+        }
+
+        function negado(botao) {
+            botao.remove();
+            document.getElementById("mensagem").innerText = "Escolha errada!";
+        }
+    </script>
+</body>
+</html>
